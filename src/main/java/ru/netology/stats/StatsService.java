@@ -28,4 +28,23 @@ public class StatsService {
         }
         return maxMonth + 1;
     }
+    public int totalSum(long[] sales) {
+        int sum = 0;
+        for (long sale : sales) {
+            sum += sale;
+        }
+        return sum;
+        }
+
+    public int averageSum(long[] sales) {
+        int sum = 0;
+        int moth = 12;
+        for (long sale : sales) {
+            sum += sale;
+
+        }
+        int mediumSum = sum/moth;
+        return mediumSum;
+    }
+
 }

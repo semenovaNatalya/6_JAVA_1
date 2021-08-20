@@ -31,4 +31,30 @@ class StatsServiceTest {
 
 
     }
+
+    @Test
+    void totalSum() {
+        StatsService service = new StatsService ();
+        long[] sales = {8, 15, 13, 15, 17, 20, 19, 20, 7, 14, 14, 18};
+        long expected =180;
+
+        long actual = service.totalSum(sales);
+
+        assertEquals(expected, actual);
+
+
+    }
+
+    @Test
+    void averageSum() {
+        StatsService service = new StatsService ();
+        long[] sales = {8, 15, 13, 15, 17, 20, 19, 20, 7, 14, 14, 18};
+        long expected =180/12;
+
+        long actual = service.averageSum(sales);
+
+        assertEquals(expected, actual);
+
+
+    }
 }
