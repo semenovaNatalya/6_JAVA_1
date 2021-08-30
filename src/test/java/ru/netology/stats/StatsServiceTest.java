@@ -8,9 +8,9 @@ class StatsServiceTest {
 
     @Test
     void minSales() {
-        StatsService service = new StatsService ();
+        StatsService service = new StatsService();
         long[] sales = {8, 15, 13, 15, 17, 20, 19, 20, 7, 14, 14, 18};
-        long expected =9;
+        long expected = 9;
 
         long actual = service.minSales(sales);
 
@@ -21,9 +21,9 @@ class StatsServiceTest {
 
     @Test
     void maxSales() {
-        StatsService service = new StatsService ();
+        StatsService service = new StatsService();
         long[] sales = {8, 15, 13, 15, 17, 20, 19, 20, 7, 14, 14, 18};
-        long expected =8;
+        long expected = 8;
 
         long actual = service.maxSales(sales);
 
@@ -34,9 +34,9 @@ class StatsServiceTest {
 
     @Test
     void totalSum() {
-        StatsService service = new StatsService ();
+        StatsService service = new StatsService();
         long[] sales = {8, 15, 13, 15, 17, 20, 19, 20, 7, 14, 14, 18};
-        long expected =180;
+        long expected = 180;
 
         long actual = service.totalSum(sales);
 
@@ -47,11 +47,38 @@ class StatsServiceTest {
 
     @Test
     void averageSum() {
-        StatsService service = new StatsService ();
+        StatsService service = new StatsService();
         long[] sales = {8, 15, 13, 15, 17, 20, 19, 20, 7, 14, 14, 18};
-        long expected =180/12;
+        long expected = 180 / 12;
 
         long actual = service.averageSum(sales);
+
+        assertEquals(expected, actual);
+
+
+    }
+
+    @Test
+    void monthBelowAverageSum() {
+        StatsService service = new StatsService();
+        long[] sales = {8, 15, 13, 15, 17, 20, 19, 20, 7, 14, 14, 18};
+        long expected = 5;
+
+        long actual = service.monthBelowAverageSum(sales);
+
+        assertEquals(expected, actual);
+
+
+    }
+
+
+    @Test
+    void monthAboveAverageSum() {
+        StatsService service = new StatsService();
+        long[] sales = {8, 15, 13, 15, 17, 20, 19, 20, 7, 14, 14, 18};
+        long expected = 5;
+
+        long actual = service.monthBelowAverageSum(sales);
 
         assertEquals(expected, actual);
 
